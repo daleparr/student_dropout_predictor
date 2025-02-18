@@ -99,6 +99,22 @@ Models were trained using **80-20 stratified train-test split**.
 ✅ **Best Model:** **XGBoost Optimized** (Highest Accuracy & Stability)
 
 ---
+### **Stage 3 Model Performance**
+
+```plaintext
+| Model                                      | Accuracy | AUC   | Precision (Class 0) | Recall (Class 0) | F1-Score (Class 0) | Precision (Class 1) | Recall (Class 1) | F1-Score (Class 1) | Validation Loss Trend | Overfitting Risk |
+|--------------------------------------------|----------|-------|----------------------|------------------|------------------|----------------------|------------------|------------------|----------------------|------------------|
+| Baseline NN (Stage 3)                      | 0.9830   | 0.9971| 0.95                 | 0.93             | 0.94             | 0.99                 | 0.99             | 0.99             | Slightly Increasing  | Moderate         |
+| NN (L2 Regularization & LR Tuning)         | 0.9759   | 0.9931| 0.94                 | 0.90             | 0.92             | 0.98                 | 0.99             | 0.99             | Stable               | Low              |
+| XGBoost Baseline                           | 0.9906   | 0.9990| 0.97                 | 0.96             | 0.97             | 0.99                 | 1.00             | 0.99             | Stable               | Very Low         |
+| XGBoost (With Lambda Regularization)       | 0.9902   | 0.9992| 0.98                 | 0.96             | 0.97             | 0.99                 | 1.00             | 0.99             | Stable               | Very Low         |
+| XGBoost (With Deeper Lambda Regularization)| 0.9906   | 0.9992| 0.98                 | 0.96             | 0.97             | 0.99                 | 1.00             | 0.99             | Stable               | Very Low         |
+| XGBoost (With Lambda & Dropout)            | 0.9914   | 0.9992| 0.98                 | 0.96             | 0.97             | 0.99                 | 1.00             | 0.99             | Stable               | Very Low         |
+```
+
+✅ **Best Model:** **XGBoost (With Lambda & Dropout)** (Highest Accuracy & AUC)
+
+---
 
 ## **🏆 Business Insights and Recommendations**
 ### **1️⃣ Early Intervention Strategies**
